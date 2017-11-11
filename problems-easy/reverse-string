@@ -1,0 +1,39 @@
+// Challenge 19: Reverse a String
+/*
+Create the function reverseString that reverses a string, and returns the value of the reversed string.
+
+NOTE: Do not use the built-in Array .reverse() method!
+
+
+Examples:
+
+INPUT: reverseString("hello");
+OUTPUT: 'olleh'
+
+INPUT: reverseString('Greetings from the moon!');
+OUTPUT: '!noom eht morf sgniteerG'
+*/
+
+// MY SOLUTION
+function reverseString(str)
+{
+  var backwards = "";
+  
+  for(var i = str.length-1; i >= 0 ; i--)
+  {
+    backwards += str[i];
+  }
+  return backwards;
+}
+
+
+/* OFFICIAL SOLUTION
+function reverseString(str){
+	var finalString = "";
+
+	for(var currentPosition = str.length-1; currentPosition >= 0; currentPosition--){
+		finalString += str[currentPosition];
+	}
+	return finalString;
+}
+*/
