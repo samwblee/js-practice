@@ -1,0 +1,34 @@
+// Challenge 4: Do You Play The Theremin?
+/*
+Create the function doYouPlayTheTheremin. If your name starts with the letter "S" or "s", you are playing the Theremin!
+
+Examples:
+The name does not have an "S" as the first character
+INPUT: doYouPlayTheTheremin('Griffin')
+OUTPUT: 'Griffin does not play the Theremin!';
+
+The name argument has an "S" as the first character.
+INPUT: doYouPlayTheTheremin('Scott');
+OUTPUT: 'Scott plays the Theremin!';
+*/
+
+// MY SOLUTION
+function doYouPlayTheTheremin(name)
+{
+  if(name[0].toLowerCase() === "s")
+  {
+    return name + " plays the Theremin!";
+  }
+  return name + " does not play the Theremin!";
+} 
+
+
+/* OFFICIAL SOLUTION
+function doYouPlayTheTheremin(name){
+  if(name[0].toLowerCase() === 's'){
+    return name + ' plays the Theremin!';
+  } else {
+      return name + ' does not play the Theremin!';
+  }
+}
+*/
