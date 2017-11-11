@@ -1,0 +1,24 @@
+//Challenge 1: Temperature Converter
+
+/*
+Write a converter function that accepts a temperature in Fahrenheit and returns the temperature in Celsius.
+For your reference, here is the equation for converting Fahrenheit to Celsius: T(°C) = (T(°F) - 32) × 5/9
+
+Examples:
+- INPUT: converter(77);
+- OUTPUT: 25
+
+- INPUT: converter(32);
+- OUTPUT: 0
+*/
+
+// MY SOLUTION
+function converter(temp)
+{
+  return (temp-32)*(5/9);
+}
+
+// OFFICIAL SOLUTION
+function converter(temp) {
+  return (temp - 32) * 5/9;
+}
