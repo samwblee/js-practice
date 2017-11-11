@@ -1,0 +1,38 @@
+// Challenge 13: Palindrome
+/*
+Have the function palindrome(str) accept a string argument, and return the boolean true if the argument is a palindrome (meaning that the string is the same forward as it is backward). Otherwise, return the boolean false.
+
+Examples:
+
+INPUT: palindrome("racecar");
+OUTPUT: true
+
+INPUT: palindrome("animal");
+OUTPUT: false
+*/
+
+// MY SOLUTION
+function palindrome(str)
+{
+  var backwards = "";
+  for(var i = str.length-1; i >= 0; i--)
+  {
+    backwards += str[i];
+  }
+  if (str === backwards)
+  {
+    return true;
+  }
+  return false;
+} 
+
+/* OFFICIAL SOLUTION
+function palindrome(str) {
+  var lowerCaseStr = str.toLowerCase();
+  for (var i = 0; i < lowerCaseStr.length; i++)
+    if (lowerCaseStr[i] !== lowerCaseStr[lowerCaseStr.length - i - 1]){
+      return false;
+    }
+  return true;
+}
+*/
