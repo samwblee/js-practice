@@ -1,0 +1,58 @@
+// Challenge 18: My Zoo
+/*
+Write a function zooInventory that takes a zoo's inventory of animals (represented using nested arrays) and returns an array of strings that describe each animal's name, species, and age.
+
+Each input array will be nested 3 levels deep. Study the examples below to understand how the data is structured.
+
+Examples:
+
+var myZoo = [
+  ["King Kong", ["gorilla", 42]],
+  ["Nemo", ["fish", 5]],
+  ["Punxsutawney Phil", ["groundhog", 11]]
+];
+INPUT: zooInventory(myZoo);
+OUTPUT: (array below)
+[
+  'King Kong the gorilla is 42', 
+  'Nemo the fish is 5',
+  'Punzsutawney Phil the groundhog is 11'
+]
+*/
+
+
+// MY SOLUTION
+function zooInventory(arr)
+{
+  var printAnimals = [];
+  
+  while (arr.length > 0)
+  {
+    printAnimals.push(arr[0][0] + " the " + arr[0][1][0] + " is " + arr[0][1][1]);
+    arr.shift();
+  }
+  
+  return printAnimals;
+}
+
+var myZoo = [
+  ["King Kong", ["gorilla", 42]],
+  ["Nemo", ["fish", 5]],
+  ["Punxsutawney Phil", ["groundhog", 11]]
+];
+zooInventory(myZoo);
+
+
+
+/* OFFICIAL SOLUTION
+function zooInventory(zoo) {
+  var inventory = [];
+  
+  for (var i=0; i<zoo.length; i++) {
+    var animal = zoo[i];
+    inventory.push(animal[0] + ' the ' + animal[1][0] + ' is ' + animal[1][1]);
+  }
+  
+  return inventory;
+}
+*/
