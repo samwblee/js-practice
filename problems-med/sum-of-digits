@@ -1,0 +1,43 @@
+// Challenge 1: Sum of Digits
+/*
+Create the function sumOfDigits that adds individual digits of a number, and returns the sum.
+
+Examples:
+console.log(sumOfDigits(414));
+//OUTPUT: 9
+
+console.log(sumOfDigits(2913));
+//OUTPUT: 15
+*/
+
+// MY SOLUTION
+function sumOfDigits(num)
+{
+  var str = "";
+  var sum = 0;
+
+  if(num)
+  {
+    str = num.toString();
+    
+    for(var i = 0; i < str.length; i++)
+    {
+      sum += +str[i];
+    }
+  }
+  
+  return sum;
+}
+
+/* OFFICIAL SOLUTION
+function sumOfDigits(num){
+	var sum = 0;
+	var numStr = num.toString();
+		
+	for(var i = 0; i < numStr.length; i++){
+		// or parseInt(numStr[i],10)
+		sum += +numStr[i];
+	}	
+	return sum;
+}
+*/
