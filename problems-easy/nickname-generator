@@ -1,0 +1,39 @@
+// Challenge 25: Nickname Generator
+/*
+Write a function, nicknameGenerator that takes a string name as an argument and returns the first 3 or 4 letters as that name's nickname! If the 3rd letter is a vowel, return the first 4 letters.
+
+Example tests:
+console.log(nicknameGenerator('Daniel'));
+//OUTPUT: 'Dan'
+
+console.log(nicknameGenerator('Beowulf'));
+//OUTPUT: 'Beow'
+*/
+
+
+// MY SOLUTION
+function nicknameGenerator(name)
+{
+  var vowels = "aeiou"
+  
+  if(vowels.indexOf(name[2]) > 0)
+  {
+    return name.slice(0,4);
+  }
+  return name.slice(0,3);
+}
+
+/* OFFICIAL SOLUTION
+function nicknameGenerator(name) {
+  var vowelsString = 'aeiou';
+  var nickname = "";
+
+  if (vowelsString.indexOf(name[2]) === -1) {
+    nickname = name.slice(0,3);
+  } else {
+    nickname = name.slice(0,4);
+  }
+
+  return nickname;
+}
+*/
