@@ -1,0 +1,36 @@
+// Flatten Arrays
+/*
+Flatten Arrays
+Write a function, flatten, that accepts a two-dimensional array as its argument and returns a flattened one-dimensional copy of the array.
+
+The argument array will never be more than 2 levels deep. Remember to return a copy, meaning you should not modify the original 2D array passed in!
+
+Examples:
+console.log(flatten([1,[2,3],4]));
+OUTPUT: [1,2,3,4];
+*/
+
+
+//MY SOLUTION
+function flatten(arr)
+{
+  var flatArr = [];
+  
+  for(var i = 0; i < arr.length; i++)
+  {
+    if(arr[i].length)
+    {
+      flatArr = flatArr.concat(arr[i]);
+      // or use for loop to iterate all elemnents of the nested array
+    }
+    else
+    {
+      flatArr.push(arr[i]);
+    }
+  }
+  return flatArr;
+}
+
+/* OFFICIAL SOLUTION
+
+*/
