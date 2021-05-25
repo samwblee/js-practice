@@ -1,2 +1,2 @@
-# js-fullstack-bootcamp-prep
-FullStack Academy Bootcamp Prep
+# js basic problem set
+js practice problem set
